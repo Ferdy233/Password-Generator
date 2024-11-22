@@ -156,7 +156,7 @@ function checkPasswordStrength(password) {
         strengthWord.innerText = 'weak';
         tooWeak.style.backgroundColor = 'hsl(13, 95%, 66%)'; // Orange
         weak.style.backgroundColor = 'hsl(13, 95%, 66%)';
-    } else if (length >= 8 && characterTypes >= 2) {
+    } else if (length >= 8 && characterTypes === 2) {
         strengthWord.innerText = 'medium';
         tooWeak.style.backgroundColor = 'hsl(42, 91%, 68%)'; // Yellow
         weak.style.backgroundColor = 'hsl(42, 91%, 68%)';
