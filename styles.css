@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap');
+
+:root {
+    --dark-gray: hsl(248, 10%, 15%);
+    --light-gray: hsl(251, 9%, 53%);
+    --almost-white: hsl(252, 11%, 91%);
+    --almost-black: hsl(248, 15%, 11%);
+    --green: hsl(127, 100%, 82%);
+    --red: hsl(0, 91%, 63%);
+    --orange: hsl(13, 95%, 66%);
+    --yellow: hsl(42, 91%, 68%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    color: var(--almost-white);
+    background: linear-gradient(180deg, var(--almost-black) 0%, var(--almost-black) 100%);
+}
+
+.main-container {
+    text-align: center;
+    min-width: 345px;
+    height: fit-content;
+    margin: 1.25rem;
+}
+
+.heading {
+    font-size: 1rem;
+    line-height: 1.3125rem;
+    color: var(--light-gray);
+    margin-bottom: 1rem;
+}
+
+.inner-container {
+    background-color: inherit;
+}
+
+.password-copy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--dark-gray);
+    margin-bottom: 1rem;
+}
+
+.password-text {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--almost-white);
+    mix-blend-mode: normal;
+    opacity: 0.25;
+}
+
+.copy-image {
+    display: flex;
+}
+
+.copy {
+    width: 85%;
+}
+
+.copied-text {
+    margin-right: 1rem;
+    text-transform: uppercase;
+    color: var(--green);
+}
+
+.copy:hover {
+    cursor: pointer;
+    filter: brightness(11%) invert(1);
+}
+
+.form-section {
+    padding: 1rem;
+    background-color: var(--dark-gray);
+}
+
+.character {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.character-text {
+    font-size: 1rem;
+    line-height: 1.3125rem;
+}
+
+.character-amount {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--green);
+}
+
+
+/* --SLIDER GLOBAL STYLES-- */
+
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden-label {
+    display: none;
+}
+
+#slider {
+    width: 100%;
+    background-color: var(--dark-gray);
+    margin-bottom: 2rem;
+}
+
+input[type='range'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: var(--almost-black);
+}
+
+input[type='range']:focus {
+    outline: none;
+}
+
+/* --SLIDER GLOBAL STYLES-- */
+
+/* --CHROME SLIDER STYLES-- */
+
+input[type='range']::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, var(--green), var(--green)), var(--almost-black);
+    background-size: var(--background-size, 0%) 100%;
+    background-repeat: no-repeat;
+    height: 0.5rem;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1.75rem;
+    height: 1.75rem;
+    background-color: var(--almost-white);
+    border-radius: 50%;
+    margin-top: -0.5rem;
+}
+
+input[type='range']::-webkit-slider-thumb:hover {
+    cursor: pointer;
+    background-color: var(--almost-black);
+    border: 2px solid var(--green);
+}
+
+/* --CHROME SLIDER STYLES-- */
+
+/* --FIREFOX SLIDER STYLES-- */
+
+input[type='range']::-moz-range-track {
+    background-color: var(--almost-black);
+    height: 0.5rem;
+}
+
+input[type='range']::-moz-range-progress {
+    background-color: var(--green);
+    height: 0.5rem;
+}
+
+input[type='range']::-moz-range-thumb {
+    -moz-appearance: none;
+    width: 1.75rem;
+    height: 1.75rem;
+    background-color: var(--almost-white);
+    border-radius: 50%;
+    border: none;
+    margin-top: -0.5rem;
+}
+
+input[type='range']::-moz-range-thumb:hover {
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: var(--almost-black);
+    border: 2px solid var(--green);
+}
+
+input[type='range']::-moz-range-thumb:active {
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: var(--almost-black);
+    border: 2px solid var(--green);
+}
+
+/* --FIREFOX SLIDER STYLES-- */
+
+.checkboxes {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    align-self: center;
+    font-size: 1rem;
+    line-height: 1.3125rem;
+    margin-left: 1.25rem;
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    background: transparent;
+    height: 1.25rem;
+    width: 1.25rem;
+    border: 2px solid var(--almost-white);
+    color: var(--almost-white);
+}
+
+input[type='checkbox']:hover {
+    border: 2px solid var(--green);
+    transition: all 0.1s ease-in;
+}
+
+input[type="checkbox"]:after {
+    content: ' ';
+    position: relative;
+    left: 35%;
+    top: 15%;
+    width: 20%;
+    height: 50%;
+    border: solid var(--dark-gray);
+    border-width: 0 3px 3px 0;
+    transform: rotate(40deg);
+    display: none;
+}
+
+input[type="checkbox"]:checked:after {
+    display: block;
+}
+
+input[type='checkbox']:checked {
+    background: var(--green);
+    color: var(--almost-black);
+    border: none;
+}
+
+.checkbox-container:nth-of-type(4) {
+    margin-bottom: 2rem;
+}
+
+.error {
+    display: none;
+    font-size: 0.875rem;
+    color: var(--red);
+    margin-bottom: 1rem;
+}
+
+.strength-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--almost-black);
+    padding: 1.125rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.strength-text {
+    font-size: 1rem;
+    line-height: 1.3125rem;
+    color: var(--light-gray);
+    text-transform: uppercase;
+}
+
+.strength-bars {
+    display: flex;
+    align-items: center;
+}
+
+.strength-word {
+    text-transform: uppercase;
+    margin-right: 0.5rem;
+}
+
+.bar {
+    width: 0.625rem;
+    height: 1.75rem;
+    border: 2px solid var(--almost-white);
+    margin-left: 0.5rem;
+}
+
+.generate {
+    width: 100%;
+    background-color: var(--green);
+    color: var(--dark-gray);
+    padding: 1.125rem;
+    text-transform: uppercase;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3125rem;
+    border: 2px solid var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.generate:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--green);
+    border: 2px solid var(--green);
+    transition: all 0.2s ease-in;
+}
+
+.svg-arrow {
+    filter: brightness(1); /* Reset brightness to prevent disappearing */
+    transition: filter 0.2s ease-in;
+}
+.generate:hover .svg-arrow {
+    filter: invert(90%) sepia(50%) saturate(296%) hue-rotate(90deg) brightness(100%) contrast(100%);
+}
+    
+
+span {
+    margin-left: 0.625rem;
+    font-size: 1.5rem;
+    width: 100%;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 760px) {
+    .main-container {
+        width: 540px;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-bottom: 1.9375rem;
+    }
+
+    .password-copy {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-section {
+        padding: 1.5rem 2rem 2rem 2rem;
+    }
+
+    .password-text {
+        font-size: 2rem;
+        line-height: 2.625rem;
+    }
+
+    .copy {
+        width: 90%;
+    }
+
+    .character-text {
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+    }
+
+    .character-amount {
+        font-size: 2rem;
+        line-height: 2.625rem;
+    }
+
+    label {
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        margin-left: 1.5rem;
+    }
+
+    .checkbox-container {
+        margin-bottom: 1.1875rem;
+    }
+
+    .error {
+        font-size: 1rem;
+    }
+
+    .strength-container {
+        padding: 1.5625rem 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .generate {
+        padding: 1.3125rem;
+        font-size: 1.125rem;
+        font-weight: 700;
+        line-height: 1.5rem;
+        border: 2px solid var(--green);
+    }
+}
